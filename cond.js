@@ -21,3 +21,14 @@ if(age<18){
 }else{
     console.log("Old")
 }
+
+// shift() and unshift()
+/*
+The shift() method removes an array element from the beginning of the array
+while the unshift() method adds an element to the beginning of the array
+*/
+const fruits = ["Apple","Banana","Cherry"]
+fruits.shift()
+console.log(fruits)
+fruits.unshift("Guava")
+console.log(fruits)
