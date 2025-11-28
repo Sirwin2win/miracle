@@ -132,3 +132,23 @@ const lion = new Animal("Lion",4,3)
 console.log(lion)
 console.log(lion.sound('roars'))
 console.log(lion.movement('runs'))
+
+
+// JavaScript class
+// a class is a template for objects
+class Person{
+    constructor(name,email,age){
+        this.name = name
+        this.email = email
+        this.age = age
+    }
+    details(){
+        return `My name is ${this.name}, you can email me on ${this.email} and I am ${this.age} years old`
+    }
+}
+const obj1 = new Person("John Doe","johndoe@gmail.com",15)
+const obj2 = new Person("Mary Doe","marydoe@gmail.com",20)
+console.log(obj1)
+console.log(obj1.details())
+console.log(obj2)
+console.log(obj2.details())
