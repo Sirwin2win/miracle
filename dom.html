@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DOM</title>
+</head>
+<body>
+    <!-- HTML
+     
+    -->
+    <!-- 
+    CSS DOM Methods for accessing html elements
+    1. getElementById()
+    2. getElementsByTagName()
+    3. getElementsByClassName()
+    4. querySelector()
+    -->
+    <h1 id="demo">Hello World!</h1>
+    <script>
+        const header1 = document.getElementById('demo')
+        console.log(header1)
+        /*
+const header1 = {
+        id:"demo",
+        style:{
+            color:'red'
+        }
+
+}
+
+        */
+       const greet = function(){
+        alert('Good day Miracle')
+       }
+        header1.innerHTML = 'JavaScript Header Element'
+        header1.style.color = '#fff'
+        header1.style.backgroundColor = '#f00'
+        header1.style.height = '300px'
+        header1.style.width = '300px'
+        // header1.style.display = 'none'
+        console.log(header1.style.color)
+        header1.addEventListener('click', greet)
+
+    </script>
+</body>
+</html>
