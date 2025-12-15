@@ -14,9 +14,30 @@
     1. getElementById()
     2. getElementsByTagName()
     3. getElementsByClassName()
-    4. querySelector()
+    4. querySelectorAll()
     -->
     <h1 id="demo">Hello World!</h1>
+    <h2>Header Two</h2>
+    <h2>Header Two</h2>
+    <h2>Header Two</h2>
+
+    <p class="pera">Para</p>
+    <div class="pera">Pera Container</div>
+    <h3 class="pera">Header Three</h3>
+
+    <h4 class="head">Header 4</h4>
+    <h4 class="head">Header 4</h4>
+    <h4 class="head">Header 4</h4>
+    <h4 class="head">Header 4</h4>
+
+    <button>Click me!</button>
+    <!-- <button onclick="hola()">Click me!</button> -->
+
+    <img src="images/no.jpg" id="photo" style="height: 200px;width: 200px;" alt="">
+    <button id="on" onclick="on()">On</button>
+    <button id="off" onclick="off()">Off</button>
+    
+
     <script>
         const header1 = document.getElementById('demo')
         console.log(header1)
@@ -41,6 +62,63 @@ const header1 = {
         // header1.style.display = 'none'
         console.log(header1.style.color)
         header1.addEventListener('click', greet)
+
+        // getting header two
+        let h2 = document.getElementsByTagName('h2')
+        console.log(h2)
+        for(let i = 0; i<h2.length;i++){
+            h2[i].innerHTML = 'New Header Info'
+            h2[i].style.backgroundColor = 'navy'
+            h2[i].style.color = '#fff'
+        }
+
+        // getting elemenets by class name
+        let pera = document.getElementsByClassName('pera')
+        console.log(pera)
+           for(let i = 0; i<pera.length;i++){
+            pera[i].innerHTML = 'New Header Info'
+            pera[i].style.backgroundColor = 'lime'
+            pera[i].style.color = '#fff'
+        }
+        // getting elements using the querySelectorAll
+        let h4 = document.querySelectorAll('h4.head')
+        console.log(h4)
+           for(let i = 0; i<h4.length;i++){
+            h4[i].innerHTML = 'New Header Info'
+            h4[i].style.backgroundColor = 'fuchsia'
+            h4[i].style.color = '#fff'
+        }
+        /*
+Event talks about what happens to an element or what a user is doing on a web page
+Event handler is a junction that determines what happens when an event occurs
+Event listener this listens for an event and calls a function asynchronously when that event occurs
+
+If the event handler requires an argument, we can use an arrow function to call the handler
+        */
+
+        function hola(){
+            alert("Greetings!")
+        }
+    const square = function(n){
+        alert(n**2)
+    }
+        
+
+        let btn = document.getElementsByTagName('button')
+        console.log(btn)
+        for(let i =0; i<btn.length; i++){
+            // btn[i].addEventListener('click',()=>square(5))
+            // btn[i].addEventListener('click',function (){ return square(5)})
+        }
+
+        // getting the image by id
+        let photo = document.getElementById('photo')
+        function on(){
+            return photo.src = 'images/light.jpg'
+        }
+        function off(){
+            return photo.src = 'images/no.jpg'
+        }
 
     </script>
 </body>

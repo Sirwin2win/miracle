@@ -9,7 +9,6 @@ try{
 }finally{
 // this is what runs whether error or no error e.g clean up code
 }
-
 */
 // console.log(name)
 try {
